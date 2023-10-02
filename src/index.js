@@ -4,12 +4,14 @@ import { Provider } from "react-redux";
 import "./index.css";
 import App from "./App";
 import { store } from "./store";
+import Footer from "./components/Footer"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <App/>
     </Provider>
+    <Footer></Footer>
   </React.StrictMode>
 );
