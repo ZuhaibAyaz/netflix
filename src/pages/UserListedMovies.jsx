@@ -8,7 +8,7 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import { getUsersLikedMovies } from "../store";
 import { useDispatch, useSelector } from "react-redux";
-
+import Footer from '../components/Footer'
 export default function UserListedMovies() {
   const movies = useSelector((state) => state.netflix.movies);
   const dispatch = useDispatch();
@@ -46,6 +46,7 @@ export default function UserListedMovies() {
           })}
         </div>
       </div>
+      <Footer></Footer>
     </Container>
   );
 }

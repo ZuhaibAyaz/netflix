@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-
+import Footer from '../components/Footer'
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 import { useNavigate } from "react-router-dom";
@@ -48,6 +48,7 @@ function MoviePage() {
         <SelectGenre genres={genres} type="movie" />
         {movies.length ? <Slider movies={movies} /> : <NotAvailable />}
       </div>
+      <Footer></Footer>
     </Container>
   );
 }

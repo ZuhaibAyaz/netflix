@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import BackgroundImage from "../components/BackgroundImg";
 import Header from "../components/Header";
+import Footer from '../components//Footer'
 import { firebaseAuth } from "../utils/firebase-config";
 import {MdOutlineArrowForwardIos} from 'react-icons/md';
 function Signup() {
@@ -77,6 +78,7 @@ function Signup() {
           {showPassword && <button onClick={handleSignIn}>Sign Up</button>}
         </div>
       </div>
+      <Footer></Footer>
     </Container>
   );
 }

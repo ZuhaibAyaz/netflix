@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import backgroundImage from "../assets/home.jpg";
 import MovieLogo from "../assets/homeTitle.webp";
-
+import Footer from '../components/Footer'
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 import { useNavigate } from "react-router-dom";
@@ -68,6 +68,7 @@ function Netflix() {
         </div>
       </div>
       <Slider movies={movies} />
+      <Footer></Footer>
     </Container>
   );
 }

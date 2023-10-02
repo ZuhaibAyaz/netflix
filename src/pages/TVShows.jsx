@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchMovies, getGenres } from "../store";
 import SelectGenre from "../components/SelectGenre";
 import Slider from "../components/Slider";
-
+import Footer from'../components/Footer';
 function TVShows() {
  
   const movies = useSelector((state) => state.netflix.movies);
@@ -55,6 +55,7 @@ function TVShows() {
           </h1>
         )}
       </div>
+      <Footer></Footer>
     </Container>
   );
 }

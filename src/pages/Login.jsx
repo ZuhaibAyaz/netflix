@@ -7,7 +7,7 @@ import BackgroundImage from "../components/BackgroundImg";
 import Header from "../components/Header";
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
-
+import Footer from '../components/Footer'
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -53,7 +53,9 @@ function Login() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </Container>
+    
   );
 }
 
