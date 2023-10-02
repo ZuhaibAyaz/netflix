@@ -11,7 +11,7 @@ import SelectGenre from "../components/SelectGenre";
 import Slider from "../components/Slider";
 
 function TVShows() {
-  const [isScrolled, setIsScrolled] = useState(false);
+ 
   const movies = useSelector((state) => state.netflix.movies);
   const genres = useSelector((state) => state.netflix.genres);
   const genresLoaded = useSelector((state) => state.netflix.genresLoaded);
@@ -37,14 +37,11 @@ function TVShows() {
     else navigate("/login");
   });
 
-  window.onscroll = () => {
-    setIsScrolled(window.pageYOffset === 0 ? false : true);
-    return () => (window.onscroll = null);
-  };
+
 
   return (
     <Container>
-      <Navbar isScrolled={isScrolled} />
+      <Navbar />
       <div className="data">
         <SelectGenre genres={genres} type="tv" />
         {movies.length ? (
