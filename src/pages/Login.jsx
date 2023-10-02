@@ -33,7 +33,7 @@ function Login() {
         <div className="form-container flex column a-center j-center">
           <div className="form flex column a-center j-center">
             <div className="title">
-              <h3>Login</h3>
+              <h2>Login</h2>
             </div>
             <div className="container flex column">
               <input
@@ -67,20 +67,36 @@ const Container = styled.div`
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
     grid-template-rows: 15vh 85vh;
+     
     .form-container {
       gap: 2rem;
-      height: 85vh;
+      height: 90vh;
+    
+      .h2{
+        margin: 0 0 10px;
+        padding: 0;
+      }
       .form {
         padding: 2rem;
         background-color: #000000b0;
-        width: 25vw;
+       height: 700px;
         gap: 2rem;
         color: white;
+        margin-bottom: 90px;
+      
+        padding: 60px 68px 40px;
         .container {
           gap: 2rem;
           input {
-            padding: 0.5rem 1rem;
-            width: 15rem;
+            
+            width: 25vw;
+            background-color:#333;
+            border: 0;
+            border-radius: 4px;
+            color: #fff;
+            height: 55px;
+            line-height: 50px;
+            padding: 16px 20px 0;
           }
           button {
             padding: 0.5rem 1rem;
@@ -88,9 +104,10 @@ const Container = styled.div`
             border: none;
             cursor: pointer;
             color: white;
-            border-radius: 0.2rem;
-            font-weight: bolder;
-            font-size: 1.05rem;
+            border-radius: 4px;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 24px 0 12px;
           }
         }
       }

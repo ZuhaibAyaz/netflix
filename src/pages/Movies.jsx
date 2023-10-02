@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import CardSlider from "../components/CardSlider";
+
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 import { useNavigate } from "react-router-dom";
@@ -37,15 +37,12 @@ function MoviePage() {
     else navigate("/login");
   });
 
-  window.onscroll = () => {
-    setIsScrolled(window.pageYOffset === 0 ? false : true);
-    return () => (window.onscroll = null);
-  };
+ 
 
   return (
     <Container>
-      <div className="navbar">
-        <Navbar isScrolled={isScrolled} />
+    <div className="navbar">
+        <Navbar />
       </div>
       <div className="data">
         <SelectGenre genres={genres} type="movie" />

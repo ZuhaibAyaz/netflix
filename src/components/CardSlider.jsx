@@ -56,6 +56,9 @@ const Container = styled.div`
   padding: 2rem 0;
   h1 {
     margin-left: 50px;
+    font-weight: 500;
+    font-size: 1.5vw;
+    line-height: 1.25vw;
   }
   .wrapper {
     .slider {

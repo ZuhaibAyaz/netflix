@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +13,6 @@ export default function UserListedMovies() {
   const movies = useSelector((state) => state.netflix.movies);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [email, setEmail] = useState(undefined);
 
   onAuthStateChanged(firebaseAuth, (currentUser) => {
@@ -27,14 +26,11 @@ export default function UserListedMovies() {
     }
   }, [email]);
 
-  window.onscroll = () => {
-    setIsScrolled(window.pageYOffset === 0 ? false : true);
-    return () => (window.onscroll = null);
-  };
+ 
 
   return (
     <Container>
-      <Navbar isScrolled={isScrolled} />
+      <Navbar  />
       <div className="content flex column">
         <h1>My List</h1>
         <div className="grid flex">

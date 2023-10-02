@@ -37,14 +37,11 @@ function Netflix() {
     if (!currentUser) navigate("/login");
   });
 
-  window.onscroll = () => {
-    setIsScrolled(window.pageYOffset === 0 ? false : true);
-    return () => (window.onscroll = null);
-  };
+  
 
   return (
     <Container>
-      <Navbar isScrolled={isScrolled} />
+      <Navbar  />
       <div className="hero">
         <img
           src={backgroundImage}
@@ -76,7 +73,7 @@ function Netflix() {
 }
 
 const Container = styled.div`
-  background-color: black;
+  background-color: #141414 ;
   .hero {
     position: relative;
     .background-image {

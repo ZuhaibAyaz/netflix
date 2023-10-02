@@ -8,7 +8,7 @@ import logo from '../assets/logo.png'
 export default function Navbar() {
 
 const links=[
-  {name: 'Home', link:''},
+  {name: 'Home', link:'/'},
   {name: 'TV Shows', link:'/tv'},
   {name: 'Movies', link:'/movies'},
   {name: 'My List', link:'/mylist'},

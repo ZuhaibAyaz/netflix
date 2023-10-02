@@ -8,7 +8,7 @@ import styled from "styled-components";
 import BackgroundImage from "../components/BackgroundImg";
 import Header from "../components/Header";
 import { firebaseAuth } from "../utils/firebase-config";
-
+import {MdOutlineArrowForwardIos} from 'react-icons/md';
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -44,7 +44,7 @@ function Signup() {
           <div className="form">
             <input
               type="email"
-              placeholder="Email address"
+             placeholder="Email Address"
               onChange={(e) =>
                 setFormValues({
                   ...formValues,
@@ -53,7 +53,9 @@ function Signup() {
               }
               name="email"
               value={formValues.email}
+                
             />
+            
             {showPassword && (
               <input
                 type="password"
@@ -69,7 +71,7 @@ function Signup() {
               />
             )}
             {!showPassword && (
-              <button onClick={() => setShowPassword(true)}>Get Started</button>
+              <button onClick={() => setShowPassword(true)}>Get Started    < MdOutlineArrowForwardIos/> </button>
             )}
           </div>
           {showPassword && <button onClick={handleSignIn}>Sign Up</button>}
@@ -115,34 +117,94 @@ const Container = styled.div`
         grid-template-columns: ${({ showPassword }) => showPassword ? "1fr 1fr" : "2fr 1fr"};
         width: 60%;
         input {
-          color: black;
-          border: none;
-          padding: 1.5rem;
-          font-size: 1.2rem;
-          border: 1px solid black;
-          &:focus {
-            outline: none;
-          }
+          width: 90%;
+          color: inherit;
+          filter: opacity(60%);
+          padding: 1.5rem 1rem 0.5rem;
+          min-height: 20px;
+          font-size: 1rem;
+          font-weight: 400;
+          color: rgb(255, 255, 255);
+          background: rgba(22, 22, 22, 0.7);
+    border-color: rgba(128, 128, 128, 0.7)
+    min-width: 16px
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.25rem;
+      
+
+    &:focus {
+      outline: none;
+    }   
         }
+
         button {
-          padding: 0.5rem 1rem;
-          background-color: #e50914;
-          border: none;
+          appearance: none;
+          font-style: inherit;
+          font-variant: inherit;
+          font-stretch: inherit;
+          font-family: inherit;
+          margin: 0px;
+          text-decoration: none;
+          -webkit-box-align: center;
+          align-items: center;
+          box-sizing: border-box;
+          display: inline-flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          letter-spacing: normal;
+          line-height: 1;
+          user-select: none;
+          border: 0px;
+          border-radius: 0.25rem;
           cursor: pointer;
-          color: white;
-          font-weight: bolder;
-          font-size: 1.05rem;
+          fill: currentcolor;
+          position: relative;
+          transition-duration: 250ms;
+          transition-property: background-color, border-color;
+          transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+          vertical-align: text-top;
+          width: auto;
+          font-size: 1.5rem;
+          font-weight: 500;
+          min-height: 3.5rem;
+          padding: 0.75rem 1.5rem;
+          background: rgb(229, 9, 20);
+          color: rgb(255, 255, 255);
         }
       }
       button {
-        padding: 0.5rem 1rem;
-        background-color: #e50914;
-        border: none;
-        cursor: pointer;
-        color: white;
-        border-radius: 0.2rem;
-        font-weight: bolder;
-        font-size: 1.05rem;
+        font-style: inherit;
+          font-variant: inherit;
+          font-stretch: inherit;
+          font-family: inherit;
+          margin: 0px;
+          text-decoration: none;
+          -webkit-box-align: center;
+          align-items: center;
+          box-sizing: border-box;
+          display: inline-flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          letter-spacing: normal;
+          line-height: 1;
+          user-select: none;
+          border: 0px;
+          border-radius: 0.25rem;
+          cursor: pointer;
+          fill: currentcolor;
+          position: relative;
+          transition-duration: 250ms;
+          transition-property: background-color, border-color;
+          transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+          vertical-align: text-top;
+          width: auto;
+          font-size: 1.5rem;
+          font-weight: 500;
+          min-height: 3.5rem;
+          padding: 0.75rem 1.5rem;
+          background: rgb(229, 9, 20);
+          color: rgb(255, 255, 255);
       }
     }
   }
